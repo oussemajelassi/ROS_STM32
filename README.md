@@ -4,6 +4,7 @@ We are implementing **serial communication between ROS and STM32** using USART p
 Please consider checking this tuto which i find for the moment instrtucting and clear : 
 **https://www.youtube.com/watch?v=cq0HmKrIOt8&t=692s**
 
+there might be somethings 
 
 on **13.50** : THe old version takes nor argument related to the generated library path however when i tried it it asked for a path.
  the solution fot this is to mention the **output path** for **Inc folder inside Documents/STM32**. 
@@ -43,3 +44,14 @@ One last thing is to set some __file types__ so please consider following these 
      
 ## Serial communication :
   In our **Node Handle** we can set input and output buffer size.
+
+## Working on ROS :
+  First check which USB PORT is connected which can be done by :
+  `dmesg | grep tty`
+  Then clone the ros drivers library by this command : 
+  `git clone https://github.com/ros-drivers/rosserial.git`
+  Now copy the rosserial/rosserial_python from the cloned repo to YOUR_WORKSPACE/Src
+  now `catkin_make` in YOUR_WORKSPACE
+  now we should source the devel/setup.bash : 
+  `source devel/setup.bash`
+ 
