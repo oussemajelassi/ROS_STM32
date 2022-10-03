@@ -6,8 +6,8 @@ Please consider checking this tuto which i find for the moment instrtucting and 
 
 there might be somethings 
 
-on **13.50** : THe old version takes nor argument related to the generated library path however when i tried it it asked for a path.
- the solution fot this is to mention the **output path** for **Inc folder inside Documents/STM32**. 
+~on **13.50** : THe old version takes nor argument related to the generated library path however when i tried it it asked for a path.
+ the solution fot this is to mention the **output path** for **Inc folder inside Documents/STM32**.~ 
  
  Never mind the path issue just put on a '.' after the command ENJOY ;)
  
