@@ -47,11 +47,22 @@ One last thing is to set some __file types__ so please consider following these 
 
 ## Working on ROS :
   First check which USB PORT is connected which can be done by :
+  
   `dmesg | grep tty`
+  
   Then clone the ros drivers library by this command : 
+  
   `git clone https://github.com/ros-drivers/rosserial.git`
+  
   Now copy the rosserial/rosserial_python from the cloned repo to YOUR_WORKSPACE/Src
+  
+  
   now `catkin_make` in YOUR_WORKSPACE
+  
   now we should source the devel/setup.bash : 
+  
   `source devel/setup.bash`
  
+ Finally we init the communication : 
+ 
+ `rosrun rosserial_python serial_node.py /dev/ttyACM0`
