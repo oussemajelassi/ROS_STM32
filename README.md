@@ -16,7 +16,7 @@ on **13.50** : THe old version takes nor argument related to the generated libra
 ### Working with CubeIDE :
   If it is your first time working with the IDE you might face some issues such as **arm-none-eabi-gcc: not found** and **unresolved inclusion : stdint**
 
-## compatability wela nra ech esmha : 
+## compatibility wela nra ech esmha : 
 He is using STM32F446E mcu I am now seeking if there is some hardware dependency or we can use another board.(will be updated soon)
 
 ### checking the **STM32Hardware.h** 
@@ -34,6 +34,9 @@ I found that there is a hardawre dependecy but for F4 / F7 / F3 families so i sh
             check use project type file
             add *.h and set their type to c++ header files
      One more last thing if you are actually reading my shit and not wondering about some insta post is that you lust change main.c to main.cpp.
+     
+### PATHS and inclusion :
+    We have to add the path for Inc Folder of the generated Librairies after running the **make_libraires.py** command. 
      
 ## Serial communication :
   In our **Node Handle** we can set input and output buffer size.
