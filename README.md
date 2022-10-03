@@ -27,9 +27,9 @@ I found that there is a hardawre dependecy but for F4 / F7 / F3 families so i sh
      
      You have first to put the path for **Inc** inside Documents/STM32 in your stm project.
     
-     The explicit #include "ros.h" and other .h file wont happen in our main.c however we are calling them on our main.cpp and then calling the functions in main.c
+     ~~ The explicit #include "ros.h" and other .h file wont happen in our main.c however we are calling them on our main.cpp and then calling the functions in main.c ~~ 
      
-     One last thing is to set file types so please consider following these steps :
+     One last thing is to set some __file types__ so please consider following these steps :
         Project propreties : c/c++ general : file types :
             check use project type file
             add *.h and set their type to c++ header files
