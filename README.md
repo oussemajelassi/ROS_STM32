@@ -15,6 +15,9 @@ on **13.50** : THe old version takes nor argument related to the generated libra
 
 ### Working with CubeIDE :
   If it is your first time working with the IDE you might face some issues such as **arm-none-eabi-gcc: not found** and **unresolved inclusion : stdint**
+  the solution is to install the ide from the official st site.
+  One other problem I faced : arm-none-eabi-gdb: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory.
+     **The Solution ** is to run  `sudo apt-get install libncurses5`
 
 ## compatibility wela nra ech esmha : 
 He is using STM32F446E mcu I am now seeking if there is some hardware dependency or we can use another board.(will be updated soon)
@@ -27,7 +30,7 @@ Please consider targetting the project to CPP
      
 You have first to put the path for **Inc** inside Documents/STM32 in your stm project.
     
- ~~ The explicit #include "ros.h" and other .h file wont happen in our main.c however we are calling them on our main.cpp and then calling the functions in main.c ~~ 
+ ~The explicit #include "ros.h" and other .h file wont happen in our main.c however we are calling them on our main.cpp and then calling the functions in main.c~
      
 One last thing is to set some __file types__ so please consider following these steps :
        *Project propreties : c/c++ general : file types :
