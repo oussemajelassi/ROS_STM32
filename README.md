@@ -23,17 +23,17 @@ He is using STM32F446E mcu I am now seeking if there is some hardware dependency
 I found that there is a hardawre dependecy but for F4 / F7 / F3 families so i should be fine with my stm32f410 ..(to be verfied)
 
 ## Working on the project : 
-     Please consider targetting the project to CPP
+Please consider targetting the project to CPP
      
-     You have first to put the path for **Inc** inside Documents/STM32 in your stm project.
+You have first to put the path for **Inc** inside Documents/STM32 in your stm project.
     
-     ~~ The explicit #include "ros.h" and other .h file wont happen in our main.c however we are calling them on our main.cpp and then calling the functions in main.c ~~ 
+ ~~ The explicit #include "ros.h" and other .h file wont happen in our main.c however we are calling them on our main.cpp and then calling the functions in main.c ~~ 
      
-     One last thing is to set some __file types__ so please consider following these steps :
-        Project propreties : c/c++ general : file types :
-            check use project type file
-            add *.h and set their type to c++ header files
-     One more last thing if you are actually reading my shit and not wondering about some insta post is that you lust change main.c to main.cpp.
+One last thing is to set some __file types__ so please consider following these steps :
+       *Project propreties : c/c++ general : file types :
+       *check use project type file
+       *add *.h and set their type to c++ header files
+       *One more last thing if you are actually reading my shit and not wondering about some insta post is that you lust change main.c to main.cpp.
      
 ### PATHS and inclusion :
     We have to add the path for Inc Folder of the generated Librairies after running the **make_libraires.py** command. 
