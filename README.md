@@ -22,6 +22,7 @@ there might be somethings
 
 ## compatibility wela nra ech esmha : 
 He is using STM32F446E mcu I am now seeking if there is some hardware dependency or we can use another board.(will be updated soon)
+**Quick update** : The project was not working on my f410 I thought about some hardaware depedency, I am now tryin on the F411RE (you will be updated very soon about the outcome)
 
 ### checking the **STM32Hardware.h** 
 I found that there is a hardawre dependecy but for F4 / F7 / F3 families so i should be fine with my stm32f410 ..(to be verfied)
@@ -38,9 +39,26 @@ One last thing is to set some __file types__ so please consider following these 
        *check use project type file
        *add *.h and set their type to c++ header files
        *One more last thing if you are actually reading my shit and not wondering about some insta post is that you lust change main.c to main.cpp.
+~The code is old so there might be some old HAL API so i ll be checking that also~
+
+One thing we must do is to enable debug to Serial wire
+
+![image](https://user-images.githubusercontent.com/100140668/193890082-99cca3c8-a372-4b45-b42a-0bd2968829a8.png)
+
+We must also set the HSE and LSE to Crystal/Cermaic Resonsator
+
+![image](https://user-images.githubusercontent.com/100140668/193891166-8c50d54f-e393-4a69-98ab-30817e94f2c8.png)
+
      
 ### PATHS and inclusion :
-    We have to add the path for Inc Folder of the generated Librairies after running the **make_libraires.py** command. 
+    We have to add the path for Inc Folder of the generated Librairies after running the **make_libraires.py** command.
+    
+    I am now copying the files as they are from a project i cloned from github : https://github.com/oussemajelassi/rosserial_stm32_NucleoF411
+    if it doesn't work i will copy the generated files.
+    
+    I have a doubt that the port have a mode issue so it cannot be acceced ( will ask sam3oun about it)
+    
+    
      
 ## Serial communication :
   In our **Node Handle** we can set input and output buffer size.
@@ -66,3 +84,11 @@ One last thing is to set some __file types__ so please consider following these 
  Finally we init the communication : 
  
  `rosrun rosserial_python serial_node.py /dev/ttyACM0`
+I faced an issue : Unable to sync with device; possible link problem or link software version mismatch such as hydro rosserial_python with groovy Arduino
+
+Most of the answers are talking about cross checkinh the baudrate that did not solve the issue, I am now trying to lower baudrate : 9600
+
+## troubleshooting :
+I found this tuto i will follow it i dunno what went wrong :
+
+https://sudonull.com/post/31955-Rosserial-STM32
