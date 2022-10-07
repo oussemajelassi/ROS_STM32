@@ -92,3 +92,5 @@ Most of the answers are talking about cross checkinh the baudrate that did not s
 I found this tuto i will follow it i dunno what went wrong :
 
 https://sudonull.com/post/31955-Rosserial-STM32
+
+There is one problem I faced is that rosrun wont rechon rosserial_stm32 as a package so the solution for that is to `source ~/catkin_ws/devel/setup.bash` after compiling the package.
