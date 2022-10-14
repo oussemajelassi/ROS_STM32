@@ -49,6 +49,28 @@ We must also set the HSE and LSE to Crystal/Cermaic Resonsator
 
 ![image](https://user-images.githubusercontent.com/100140668/193891166-8c50d54f-e393-4a69-98ab-30817e94f2c8.png)
 
+Whe have to add this peace of code to **stm32f4xx_it.h** :
+  /* USER CODE BEGIN 0 */
+  #include "my_main.h"
+  #ifdef __cplusplus
+  extern "C" {
+  #endif
+  
+  
+  void USART2_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART2_IRQn 0 */
+	USART_RX_Callback();
+  /* USER CODE END USART2_IRQn 0 */
+  HAL_UART_IRQHandler(&huart2);
+  /* USER CODE BEGIN USART2_IRQn 1 */
+  /* USER CODE END USART2_IRQn 1 */
+}
+/* USER CODE BEGIN 1 */
+#ifdef __cplusplus
+}
+#endif
+
      
 ### PATHS and inclusion :
     We have to add the path for Inc Folder of the generated Librairies after running the **make_libraires.py** command.
