@@ -51,24 +51,42 @@ We must also set the HSE and LSE to Crystal/Cermaic Resonsator
 
 Whe have to add this peace of code to **stm32f4xx_it.h** :
   /* USER CODE BEGIN 0 */
+  
   #include "my_main.h"
+  
   #ifdef __cplusplus
+  
   extern "C" {
+  
   #endif
   
   
+  
   void USART2_IRQHandler(void)
+
 {
-  /* USER CODE BEGIN USART2_IRQn 0 */
-	USART_RX_Callback();
-  /* USER CODE END USART2_IRQn 0 */
-  HAL_UART_IRQHandler(&huart2);
-  /* USER CODE BEGIN USART2_IRQn 1 */
-  /* USER CODE END USART2_IRQn 1 */
+
+/* USER CODE BEGIN USART2_IRQn 0 */
+
+USART_RX_Callback();
+
+/* USER CODE END USART2_IRQn 0 */
+
+HAL_UART_IRQHandler(&huart2);
+
+/* USER CODE BEGIN USART2_IRQn 1 */
+
+/* USER CODE END USART2_IRQn 1 */
+
 }
+
 /* USER CODE BEGIN 1 */
+
 #ifdef __cplusplus
+
 }
+
+
 #endif
 
      
