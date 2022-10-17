@@ -4,8 +4,7 @@ We are implementing **serial communication between ROS and STM32** using USART p
 Please consider checking this tuto which i find for the moment instrtucting and clear : 
 **https://www.youtube.com/watch?v=cq0HmKrIOt8&t=692s**
 
-there might be somethings 
-
+**To be completed with further .IOC file configs**
 ~on **13.50** : THe old version takes nor argument related to the generated library path however when i tried it it asked for a path.
  the solution fot this is to mention the **output path** for **Inc folder inside Documents/STM32**.~ 
  
@@ -22,10 +21,10 @@ there might be somethings
 
 ## compatibility wela nra ech esmha : 
 He is using STM32F446E mcu I am now seeking if there is some hardware dependency or we can use another board.(will be updated soon)
-**Quick update** : The project was not working on my f410 I thought about some hardaware depedency, I am now tryin on the F411RE (you will be updated very soon about the outcome)
+**Quick update** : ~The project was not working on my f410 I thought about some hardaware depedency, I am now tryin on the F411RE (you will be updated very soon about the outcome)~ **the project works fine on my f410**
 
 ### checking the **STM32Hardware.h** 
-I found that there is a hardawre dependecy but for F4 / F7 / F3 families so i should be fine with my stm32f410 ..(to be verfied)
+I found that there is a hardawre dependecy but for F4 / F7 / F3 families so i should be fine with my stm32f410 ..(to be verfied) ==> checked !! 
 
 ## Working on the project : 
 Please consider targetting the project to CPP
