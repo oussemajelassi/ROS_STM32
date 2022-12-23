@@ -44,9 +44,16 @@ One thing we must do is to enable debug to Serial wire
 
 ![image](https://user-images.githubusercontent.com/100140668/193890082-99cca3c8-a372-4b45-b42a-0bd2968829a8.png)
 
-We must also set the HSE and LSE to Crystal/Cermaic Resonsator
+We must also set the HSE and LSE to Bypass clock Source and Crystal/Cermaic Resonsator
 
-![image](https://user-images.githubusercontent.com/100140668/193891166-8c50d54f-e393-4a69-98ab-30817e94f2c8.png)
+file:///home/flooki/Desktop/Screenshot%20from%202022-10-10%2021-22-45.png![image](https://user-images.githubusercontent.com/100140668/209352439-4622547c-0799-400d-8d1c-8a599410f88e.png)
+
+Please apply those configs : 
+
+file:///home/flooki/Desktop/Screenshot%20from%202022-10-14%2011-50-20.png![image](https://user-images.githubusercontent.com/100140668/209352170-cb954e10-f840-4d54-9769-e0302da76e08.png)
+
+file:///home/flooki/Desktop/Screenshot%20from%202022-10-14%2011-50-54.png![image](https://user-images.githubusercontent.com/100140668/209352243-9b01aad4-db83-4f1c-b2ba-aa843ecf0fd0.png)
+
 
 Whe have to add this peace of code to **stm32f4xx_it.h** :
   /* USER CODE BEGIN 0 */
