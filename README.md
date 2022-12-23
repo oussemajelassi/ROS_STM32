@@ -11,13 +11,15 @@ Please consider checking this tuto which i find for the moment instrtucting and 
  Never mind the path issue just put on a '.' after the command ENJOY ;)
  
  on **15.00** He copied the stm32 geerated file to a shared folder between linux and windows cuz he is using a VM.
- I think it is not necessary if you are working on dual boot or if you install the CUBEIDE on ubuntu.
+ I think it is not necessary if you are working on dual boot and you install the CUBEIDE on ubuntu.
 
 ### Working with CubeIDE :
   If it is your first time working with the IDE you might face some issues such as **arm-none-eabi-gcc: not found** and **unresolved inclusion : stdint**
   the solution is to install the ide from the official st site.
+  
   One other problem I faced : arm-none-eabi-gdb: error while loading shared libraries: libncurses.so.5: cannot open shared object file: No such file or directory.
-     **The Solution ** is to run  `sudo apt-get install libncurses5`
+
+**The Solution** is to run  `sudo apt-get install libncurses5`
 
 ## compatibility wela nra ech esmha : 
 He is using STM32F446E mcu I am now seeking if there is some hardware dependency or we can use another board.(will be updated soon)
